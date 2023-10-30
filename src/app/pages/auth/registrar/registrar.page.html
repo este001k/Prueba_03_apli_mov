@@ -1,0 +1,32 @@
+<app-header backButton="/auth" tittle="Registrarse"></app-header>
+
+<ion-content>
+  <form [formGroup]="form" class="auth-form" (ngSubmit)="submit()">
+
+
+    <app-custom-input type="text" label="nombre" [control]="form.controls.nombre"></app-custom-input>
+
+    <div class="validators" *ngIf="form.controls.nombre.errors">
+      <div *ngIf="form.controls.nombre.errors?.['requiered']"  style="color: red;">Hace falta el usuario</div>
+    </div>
+
+    <app-custom-input type="text" label="email" [control]="form.controls.email"></app-custom-input>
+
+    <div class="validators" *ngIf="form.controls.email.errors">
+      <div *ngIf="form.controls.email.errors?.['requiered']"  style="color: red;">Hace falta el email</div>
+    </div>
+
+    <app-custom-input type="password" label="password" [control]="form.controls.password"></app-custom-input>
+
+    <div class="validators" *ngIf="form.controls.password.errors && form.controls.password.touched">
+      <div *ngIf="form.controls.password.errors?.['requiered']"   style="color: red;">debes poner la contraseña</div>
+    </div>
+
+    <ion-button expand="block" routerLink="registrar"  type="submit" class="submit" >
+      Registrarse
+    </ion-button>
+  </form>
+
+</ion-content>
+
+
