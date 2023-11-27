@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'ver-reg',
-    loadChildren: () => import('./ver-reg/ver-reg.module').then( m => m.VerRegPageModule)
+    loadChildren: () => import('./ver-reg/ver-reg.module').then( m => m.VerRegPageModule),
   }
 ];
 

@@ -19,7 +19,7 @@ export class RegistrarPage implements OnInit {
   })
 
   firebaseSvc = inject(FirebaseService);
-  utilsSvc = inject(UtilsService)
+  utilsSvc = inject(UtilsService);
 
   ngOnInit() {
   }
@@ -61,7 +61,7 @@ export class RegistrarPage implements OnInit {
       const loading = await this.utilsSvc.loading();
       await loading.present();
 
-      let path='users/${uid}'; //donde se guardara 
+      let path='users/uid'; //donde se guardara 
 
       delete this.form.value.password; //no se envia la contraseña
 

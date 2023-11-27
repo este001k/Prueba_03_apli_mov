@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { VerRegPageRoutingModule } from './ver-reg-routing.module';
 
 import { VerRegPage } from './ver-reg.page';
+import { ShareModule } from 'src/app/share/share.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    VerRegPageRoutingModule
+    VerRegPageRoutingModule,
+    ShareModule
   ],
   declarations: [VerRegPage]
 })

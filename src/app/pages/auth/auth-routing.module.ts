@@ -6,7 +6,7 @@ import { AuthPage } from './auth.page';
 const routes: Routes = [
   {
     path: '',
-    component: AuthPage
+    component: AuthPage,
   },
   {
     path: 'forgot-password',
@@ -15,7 +15,8 @@ const routes: Routes = [
   {
     path: 'registrar',
     loadChildren: () => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
-  }
+  },
+
 ];
 
 @NgModule({
